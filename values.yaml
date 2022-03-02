@@ -1,0 +1,45 @@
+# Default values for artemis-operator-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# The operator namespace settings
+operatorNamespace:
+  # Create the resource
+  create: true
+  # The namespace name
+  name: activemq-artemis-operator
+
+# The service account name to be used by the operator
+operatorServiceAccount:
+  # Create the resource
+  create: true
+  # The service account name
+  name: activemq-artemis-operator
+
+# The operator role settings
+operatorRole:
+  # Create the resource
+  create: true
+  # The role name
+  name: activemq-artemis-operator-role
+
+# The operator role binding settings
+operatorRoleBinding:
+  # Create the resource
+  create: true
+  # The role binding name
+  name: activemq-artemis-operator-role-binding
+
+# The operator deployment image settings
+operatorImage:
+  # The repository where the operator image is pulled from
+  repository: "quay.io/artemiscloud/activemq-artemis-operator"
+  
+  # The operator image tag
+  # By default the tag version is retrieved by appVersion in Chart.yaml to be aligned with the Chart version
+  # but can be override by this setting.
+  #tag: 0.20.1
+  
+  # Operator deployment image pull policy
+  pullPolicy: Always
+

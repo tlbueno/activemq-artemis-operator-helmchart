@@ -1,0 +1,86 @@
+# The chart API version (required)
+apiVersion: v2
+
+# The name of the chart (required)
+name: artemis-operator-chart
+
+# A SemVer 2 version (required)
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 0.1.0
+
+# A SemVer range of compatible Kubernetes versions (optional)
+kubeVersion: ">= 1.21.0"
+
+# A single-sentence description of this project (optional)
+description: A ActiveMQ Artemis Operator Helm chart for Kubernetes
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# A list of keywords about this project (optional)
+#keywords:
+#  - A list of keywords
+
+# The URL of this projects home page (optional)
+#home: https://example.org
+
+# A list of URLs to source code for this project (optional)
+#sources:
+#  - https://www.github.com/example
+
+# A list of the chart requirements (optional)
+#dependencies:
+#  # The name of the chart 
+#  - name: nginx
+#    # The version of the chart
+#    version: "1.2.3"
+#    # (optional) The repository URL or alias
+#    repository: "https://example.com/charts" or "@repo-name"
+#    # (optional) A yaml path that resolves to a boolean, used for enabling/disabling charts
+#    condition: subchart1.enabled
+#    # (optional) Tags can be used to group charts for enabling/disabling together
+#    tags: 
+#      - sample-tag
+#    # (optional) ImportValues holds the mapping of source values to parent key to be imported. 
+#    # Each item can be a string or pair of child/parent sublist items.
+#    import-values:
+#      - data
+#      - child: default.data
+#        parent: myimports
+#    # (optional) Alias to be used for the chart. Useful when you have to add the same chart multiple times
+#    alias: new-subchart-1
+
+# A list of maintainers (optional)
+#maintainers: # (optional)
+#  # The maintainers name (required for each maintainer)
+#  - name: Some Name
+#    # The maintainers email (optional for each maintainer)
+#    email: someone@example.org
+#    # A URL for the maintainer (optional for each maintainer)
+#    url: https://www.example.org/people/someone
+
+# A URL to an SVG or PNG image to be used as an icon (optional).
+# icon: https://example.org/icon.png
+
+# The version of the app that this contains (optional). Needn't be SemVer. Quotes recommended.
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+appVersion: "0.20.1"
+
+# Whether this chart is deprecated (optional, boolean)
+deprecated: false
+
+# A list of annotations keyed by name (optional).
+#annotations:
+#  example: An example annotation
